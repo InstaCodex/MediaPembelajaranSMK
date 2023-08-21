@@ -54,6 +54,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 2.NIS : 9466
 3.NAMA : SAIFUL HIDAYAT
 4.NIS : 9488
+5.
+6.
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
