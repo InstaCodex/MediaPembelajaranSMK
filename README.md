@@ -56,8 +56,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 4.NIS : 9488
 5.NAMA : 9468
 6.NIS : FAIZ RIZKY SHURURI
-7.
-8.
+7.NAMA : FIKAR DWI RAMADHANI
+8.NIS : 9469
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
