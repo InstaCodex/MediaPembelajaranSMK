@@ -51,6 +51,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 ## Contributing
 1.NAMA : DWI CAHYONO ROMADHON (9466)
+2.
+3.
 
 ## Code of Conduct
 
