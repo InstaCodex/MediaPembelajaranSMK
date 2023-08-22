@@ -52,8 +52,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 ## Contributing
 1.NAMA : DWI CAHYONO ROMADHON (9466)
 3.NAMA : SAIFUL HIDAYAT (9488)
-5.NAMA : 9468
-6.NIS : FAIZ RIZKY SHURURI
+5.NAMA : FAIZ RIZKY SHURURI (9468)
 7.NAMA : FIKAR DWI RAMADHANI (9469)
 8.
 9.
