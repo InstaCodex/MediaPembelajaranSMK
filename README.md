@@ -54,6 +54,7 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 2.NAMA : SAIFUL HIDAYAT (9488)
 3.NAMA : FAIZ RIZKY SHURURI (9468)
 4.NAMA : FIKAR DWI RAMADHANI (9469)
+5.
 
 ## Code of Conduct
 
