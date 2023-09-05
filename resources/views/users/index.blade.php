@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Tambahkan Data User</h2>
+                <h2>Guru Pembelajaran SMA/SMK</h2>
             </div>
         </div>
     </div>
@@ -18,10 +18,10 @@
                         placeholder="Pencarian..." />
                 </div>
                 <div class="form-group mr-1">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button class="btn btn-success">Refresh</button>
                 </div>
-                <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('user.create') }}">Creat New Techear</a>
+                <div class="form-group mr-1">
+                    <a class="btn btn-primary" href="{{ route('users.create') }}">Tambah</a>
                 </div>
             </form>
         </div>
@@ -30,25 +30,24 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Name</th>
+                        <th>Nama</th>
                         <th>Email</th>
                         <th>Role</th>
                         <th>Created_At</th>
-                        <th>Action</th>
+                        <th>Aksi</th>
                     </tr>
                 </thead>
                 <?php $no = 1; ?>
                 @foreach ($rows as $row)
                     <tr>
                         <td>{{ $no++ }}</td>
-                        <td>{{ $row->nama_user }}</td>
+                        <td>{{ $row->name }}</td>
                         <td>{{ $row->email }}</td>
                         <td>{{ $row->role }}</td>
                         <td>{{ $row->created_at }}</td>
                         <td>
-                            <form action="{{ route('user.destroy', $row) }} style="display: inline-block; method="POST">
-
-                                <a class="btn btn-info" href="{{ route('user.edit', $row) }}">Ubah</a>
+                            <form action="{{ route('users.destroy', $row->id) }}" method="POST">
+                                <a class="btn btn-info" href="{{ route('users.edit', $row->id) }}">Ubah</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Hapus</button>

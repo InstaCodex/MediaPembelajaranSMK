@@ -3,6 +3,7 @@
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\CategoriController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,6 +25,7 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/contributor', [HalamanController::class,'contributor']);
-Route::resource('user', UserController::class);
+Route::resource('users', UserController::class);
 Route::resource('books', BookController::class);
+Route::resource('categories', CategoriController::class);
 

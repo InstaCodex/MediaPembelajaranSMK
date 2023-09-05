@@ -14,7 +14,7 @@ class BookController extends Controller
     public function index(Request $request)
     {
         $q = $request->input('q');
-        $categori = $request->input('categori');
+        $book = $request->input('book');
 
         $query = Book::query();
 
@@ -22,13 +22,13 @@ class BookController extends Controller
             $query->where('name', 'like', '%' . $q . '%');
         }
 
-        if ($categori) {
-            $query->where('categori', $categori);
+        if ($book) {
+            $query->where('categori', $book);
         }
 
         $books = $query->paginate(10);
 
-        return view('books.index', compact('books', 'q', 'categori'));
+        return view('books.index', compact('books', 'q'));
     }
 
     public function create(): View
@@ -42,18 +42,16 @@ class BookController extends Controller
             $request,
             [
                 'name' => 'required',
-                'categori' => 'required',
-                'dokumen' => 'mimes:doc,docx,pdf,xls,xlxs,pdf'
+                'dokumen' => 'mimes:doc,docx,pdf,xls'
             ],
             [
-                'name.required' => 'name harus disi',
-                'categori.required' => 'categori harus disi',
-                'dokumen.mimes' => 'dokumen harus pdf,doc'
+                'name.required' => 'nama harus diisi',
+                'dokumen.mimes' => 'dokumen harus pdf,doc,xlxs'
             ]
         );
 
         $name = $request->post('name');
-        $categori = $request->post('categori');
+
         $dokumen = $request->file('dokumen');
         $explode = explode('.', $dokumen->getClientOriginalName());
         $originalName = $explode[0];

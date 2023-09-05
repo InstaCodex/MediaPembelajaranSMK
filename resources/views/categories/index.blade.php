@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Materi Pembelajaran SMA/SMK</h2>
+                <h2>Categori Pembelajaran SMA/SMK</h2>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
                     <button type="submit" class="btn btn-primary">Search</button>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('books.create') }}">Creat New Books</a>
+                    <a class="btn btn-success" href="{{ route('categories.create') }}">Create New Categori</a>
                 </div>
             </form>
         </div>
@@ -31,19 +31,17 @@
                     <tr>
                         <th>No</th>
                         <th>Name</th>
-                        <th>File</th>
                         <th width="280px">Action</th>
                     </tr>
                 </thead>
-                <?php $no = 1; ?>
-                @foreach ($books as $index => $book)
+                @php $no = 1; @endphp 
+                @foreach ($categories as $category)
                     <tr>
-                        <td>{{ $index + 1 }}</td>
-                        <td>{{ $book->name }}</td>
-                        <td>{{ $book->dokumen }}</td>
+                        <td>{{ $no++ }}</td>
+                        <td>{{ $category->name }}</td>
                         <td>
-                            <form action="{{ route('books.destroy', $book->id) }}" method="POST">
-                                <a class="btn btn-info" href="{{ route('books.show', $book->id) }}">Lihat</a>
+                            <form action="{{ route('categories.destroy', $category->id) }}" method="POST">
+                                <a class="btn btn-info" href="{{ route('categories.show', $category->id) }}">Lihat</a>
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Hapus</button>
