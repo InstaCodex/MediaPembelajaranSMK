@@ -1,4 +1,4 @@
-@extends('app')
+@extends('layouts/backend')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
@@ -34,7 +34,7 @@
                         <th width="280px">Action</th>
                     </tr>
                 </thead>
-                @php $no = 1; @endphp 
+                @php $no = 1; @endphp
                 @foreach ($categories as $category)
                     <tr>
                         <td>{{ $no++ }}</td>

@@ -3,6 +3,7 @@
     margin: 0;
     font-family: sans-serif;
 }
+
 .banner {
     width: 100%;
     height: 100vh;
@@ -10,6 +11,7 @@
     background-size: cover;
     background-position: center;
 }
+
 .navbar {
     width: 85%;
     margin: auto;
@@ -18,23 +20,27 @@
     align-items: center;
     justify-content: space-between;
 }
+
 .logo {
     width: 400px;
     font-size: 30px;
     color: #fff;
 }
+
 .navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
+
 .navbar ul li a {
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
 }
-.navbar ul li::after{
+
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -43,12 +49,12 @@
     left: 0;
     bottom: -10px;
     transition: 0.5s;
-
-} 
-.navbar ul li:hover::after{
-    width: 100%;
-
 }
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
 .content {
     width: 100%;
     position: absolute;
@@ -57,16 +63,18 @@
     color: #fff;
     text-align: center;
 }
+
 .content h1 {
     font-size: 70px;
     margin-top: 80px;
 }
+
 .content p {
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
-
 }
+
 button {
     width: 200px;
     padding: 15px 0;
@@ -81,6 +89,7 @@ button {
     position: relative;
     overflow: hidden;
 }
+
 span {
     background: #009688;
     height: 100%;
@@ -92,10 +101,45 @@ span {
     z-index: -1;
     transition: 0.5s;
 }
+
 button:hover span {
-    width:100% ;
+    width: 100%;
 }
 
-button:hover{
-   border: none; 
+button:hover {
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: auto;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .navbar ul {
+        margin-top: 20px;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .content {
+        position: static;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Book;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
@@ -25,7 +26,7 @@ class UserController extends Controller
     public function create(Request $request)
     {
         $data['title'] = 'Tambah User';
-        $data['role'] = ['admin' => 'Admin', 'guru' => 'Guru'];
+        $data['role'] = ['guru' => 'Guru'];
         return view('users.create', $data);
     }
 
@@ -66,7 +67,7 @@ class UserController extends Controller
     {
         $data['title'] = 'Ubah User';
         $data['row'] = $user;
-        $data['role'] = ['admin' => 'Admin', 'guru' => 'Guru'];
+        $data['role'] = ['guru' => 'Guru'];
         return view('users.edit', $data);
     }
 

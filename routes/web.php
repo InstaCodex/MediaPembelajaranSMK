@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
-use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\CategoriController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,13 +18,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('halaman/home');
+    return view('frontend/home');
+});
+
+Route::get('/book', function () {
+    return view('frontend/book');
+});
+
+Route::get('/contributor', function () {
+    return view('frontend/contributor');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/contributor', [HalamanController::class,'contributor']);
 Route::resource('users', UserController::class);
 Route::resource('books', BookController::class);
 Route::resource('categories', CategoriController::class);

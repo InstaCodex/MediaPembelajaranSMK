@@ -1,9 +1,9 @@
-@extends('app')
+@extends('dashstatis/statis')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Guru Pembelajaran SMA/SMK</h2>
+                <h2>Data Guru E-Learning</h2>
             </div>
         </div>
     </div>

@@ -1,25 +1,23 @@
 <?php
-  
+
 namespace App\Http\Controllers;
-  
+
 use App\Models\Category;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
-  
+
 class CategoriController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    // public function index(): View
-    // {
-    //     $categories = category::latest()->paginate(5);
-        
-    //     return view('categories.index',compact('categories'))
-    //                 ->with('i', (request()->input('page', 1) - 1) * 5);
-    // }
+
+    public function __construct()
+    {
+        $category = new Category();
+    }
 
     public function index(Request $request): View
     {
@@ -61,6 +59,8 @@ class CategoriController extends Controller
      */
     public function show(Category $category): View
     {
+        $category = Category::find($category->id);
+        $books = $category->books;
         return view('categories.show', compact('category'));
     }
 

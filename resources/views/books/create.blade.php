@@ -1,4 +1,4 @@
-@extends('books.layout')
+@extends('app')
 
 @section('content')
     <div class="row">
@@ -33,28 +33,55 @@
                     <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
-                <div class="mb-3">
-                    <label for="dokumen" class="form-label"><strong>Upload File</strong></label>
-                    <div class="form-group">
-                        <input class="form-control" type="file" name="dokumen">
-                        @error('dokumen')
-                            <span class="invailid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Category:</strong>
+                    <select name="category_id" class="form-control">
+                        <option value=""></option>
+                        @foreach ($categories as $category)
+                            <option value="{{ $category->id }}">{{ $category->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
             </div>
-            <p id="message"></p>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="upload-form">
-                    <div class="upload-form">
-                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
+                <div class="form-group">
+                    <strong>User :</strong>
+                    <select name="user_id" class="form-control">
+                        <option value=""></option>
+                        @foreach ($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="dokumen" class="form-label"><strong>Upload File</strong></label>
+            <div class="form-group">
+                <input class="form-control" type="file" name="dokumen">
+                @error('dokumen')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div>
+
+        <p id="message"></p>
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
     </form>
 
 @endsection
