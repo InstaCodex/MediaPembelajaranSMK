@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Materi Pembelajaran SMA/SMK</h2>
+                <h2>Data Buku E-Learning</h2>
             </div>
         </div>
     </div>
@@ -32,6 +32,9 @@
                         <th>No</th>
                         <th>Name</th>
                         <th>File</th>
+                        <th>Upload_by</th>
+                        <th>Created_at</th>
+                        <th>Views</th>
                         <th width="280px">Action</th>
                     </tr>
                 </thead>
@@ -41,6 +44,9 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $book->name }}</td>
                         <td>{{ $book->dokumen }}</td>
+                        <td>{{ $book->user['name'] }}</td>
+                        <td>{{ $book->created_at }}</td>
+                        <td>{{ $book->Views }}</td>
                         <td>
                             <form action="{{ route('books.destroy', $book->id) }}" method="POST">
                                 <a class="btn btn-info" href="{{ route('books.show', $book->id) }}">Lihat</a>

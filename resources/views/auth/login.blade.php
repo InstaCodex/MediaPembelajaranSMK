@@ -1,4 +1,4 @@
-{{-- @extends('layout/frontend')
+{{-- @extends('layouts/frontend')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -38,17 +38,7 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="role" name="role" class="form-control">
-                                    <option value="admin">Admin</option>
-                                    <option value="guru">Guru</option>
-                                    <option value="siswa">Siswa</option>
-                                </select>
-                            </div>
-                        </div>
+                        
 
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">

@@ -1,9 +1,9 @@
-@extends('dashstatis/statis')
+@extends('layouts.backend')
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Data Guru E-Learning</h2>
+                <h2>Data User E-Learning</h2>
             </div>
         </div>
     </div>

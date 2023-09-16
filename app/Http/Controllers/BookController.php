@@ -29,8 +29,9 @@ class BookController extends Controller
 
         $books = $query->paginate(10);
         $categories = Category::all(); // Mengambil semua kategori
+        $users = User::all();
 
-        return view('books.index', compact('books', 'q', 'categories', 'categoryFilter'));
+        return view('books.index', compact('books', 'q', 'categories', 'categoryFilter' , 'users'));
     }
 
     public function create(): View
