@@ -9,9 +9,6 @@
 <div class="container">
     @yield('content')
 </div>
-<<<<<<< HEAD
-=======
     
->>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 </body>
 </html>

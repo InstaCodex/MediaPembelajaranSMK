@@ -70,7 +70,12 @@ return [
     |
     */
 
+<<<<<<< HEAD
     'timezone' => env('APP_TIMEZONE', 'Asia/Jakarta'),
+=======
+    'timezone' => 'UTC',
+
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration

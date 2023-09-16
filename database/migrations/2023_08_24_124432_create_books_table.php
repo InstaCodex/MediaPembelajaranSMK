@@ -1,9 +1,17 @@
 <?php
+<<<<<<< HEAD
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+=======
+  
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+  
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 return new class extends Migration
 {
     /**
@@ -16,6 +24,7 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+<<<<<<< HEAD
             $table->foreignId('category_id');
             $table->foreignId('user_id');
             $table->string('dokumen');
@@ -23,6 +32,13 @@ return new class extends Migration
         });
     }
 
+=======
+            // $table->text('detail');
+            $table->timestamps();
+        });
+    }
+  
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
     /**
      * Reverse the migrations.
      *
@@ -32,4 +48,8 @@ return new class extends Migration
     {
         Schema::dropIfExists('books');
     }
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9

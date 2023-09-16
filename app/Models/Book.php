@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Book extends Model
 {
+<<<<<<< HEAD
     protected $guarded = ['id'];
     protected $table = 'books';
     protected $primaryKey = 'id';
@@ -20,4 +21,12 @@ class Book extends Model
     {
         return $this->belongsTo(User::class);
     }
+=======
+    protected $fillable = [
+         'name', 
+        // ...other fields,
+        //'_token', // Add any other fields you want to mass assign here
+    ];
+    use HasFactory;
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 }

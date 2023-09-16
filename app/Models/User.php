@@ -17,17 +17,25 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+<<<<<<< HEAD
     protected $guarded = ['id'];
+=======
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
     protected $fillable = [
         'name',
         'email',
         'password',
+<<<<<<< HEAD
         'role',
     ];
     public function books()
     {
         return $this->hasMany(Book::class, 'user_id', 'id');
     }
+=======
+    ];
+
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
     /**
      * The attributes that should be hidden for serialization.
      *

@@ -1,11 +1,18 @@
 <?php
 
+<<<<<<< HEAD
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SiswaController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\CategoriController;
 use Illuminate\Support\Facades\Route;
+=======
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoriController;
+use App\Http\Controllers\UserController;
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +26,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+<<<<<<< HEAD
     return view('frontend/home');
 });
 
@@ -45,3 +53,17 @@ Route::resource('books', BookController::class);
 Route::resource('categories', CategoriController::class);
 Route::resource('students', UserController::class);
 
+=======
+    return view('welcome');
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('books', BookController::class);
+
+Route::resource('categories', CategoriController::class);
+
+Route::resource('users', UserController::class);
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9

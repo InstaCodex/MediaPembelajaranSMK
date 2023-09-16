@@ -21,6 +21,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+<<<<<<< HEAD
     // public function index()
     // {
     //     return view('admin/index');
@@ -28,5 +29,10 @@ class HomeController extends Controller
     public function index()
     {
         return view('layouts/backend');
+=======
+    public function index()
+    {
+        return view('home');
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
     }
 }

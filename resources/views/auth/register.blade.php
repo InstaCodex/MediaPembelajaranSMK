@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  @extends('layouts.frontend')
+=======
+@extends('layouts.app')
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 
 @section('content')
 <div class="container">
@@ -61,6 +65,7 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
                         <div class="row mb-3">
                             <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
                         
@@ -80,6 +85,8 @@
                             </div>
                         </div>
 
+=======
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -93,4 +100,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection 
+=======
+@endsection
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9

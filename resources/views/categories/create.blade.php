@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 @extends('layouts.backend')
+=======
+@extends('categories.layout')
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
   
 @section('content')
 <div class="row">
@@ -33,6 +37,15 @@
                 <input type="text" name="name" class="form-control" placeholder="Name">
             </div>
         </div>
+<<<<<<< HEAD
+=======
+        <!-- <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>Detail:</strong>
+                <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
+            </div>
+        </div> -->
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                 <button type="submit" class="btn btn-primary">Submit</button>
         </div>

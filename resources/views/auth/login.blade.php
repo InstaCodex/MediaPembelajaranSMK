@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 {{-- @extends('layouts/frontend')
+=======
+@extends('layouts.app')
+
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -38,8 +43,11 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
                         
 
+=======
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -71,4 +79,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection --}}
+=======
+@endsection
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
