@@ -22,8 +22,19 @@
                     class="brand-image img-circle elevation-3" style="opacity: .8">
     
                 <span class="brand-text font-weight-light">
+<<<<<<< HEAD
                     E-Learning
                 </span>
+=======
+                    @if(auth()->user()->role == "admin")
+                    {{ Auth::user()->role }}
+                    E-Learing
+                @elseif (auth()->user()->role == "guru")
+                {{ Auth::user()->role }}
+                E-Learing
+                </span>
+                    @endif
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
             </a>
 
             <!-- Sidebar -->
@@ -31,7 +42,11 @@
                 <!-- Sidebar user (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
+<<<<<<< HEAD
                         <img src="./gambar/guru.jpg" class="img-circle elevation-2"
+=======
+                        <img src="./gambar/admin.png" class="img-circle elevation-2"
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                             alt="User Image">
                     </div>
                     <div class="info" style="color: white">
@@ -55,7 +70,11 @@
                         <li class="nav-item">
                             <a href="{{ url('/users') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
+<<<<<<< HEAD
                                 <p>Data Pengguna </p>
+=======
+                                <p>Data User </p>
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                             </a>
                         </li>
 
@@ -101,6 +120,7 @@
                         <li class="nav-item">
                             <a href="{{ url('/categories') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
+<<<<<<< HEAD
                                 <p>Data Kategori </p>
                             </a>
                         </li>
@@ -110,6 +130,9 @@
                             <a href="{{ url('/book') }}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Buku Siswa</p>
+=======
+                                <p>Data Categori </p>
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                             </a>
                         </li>
 
@@ -119,7 +142,11 @@
                                 @if (auth()->check())
                                     <a href="{{ route('logout') }}" class="nav-link"
                                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+<<<<<<< HEAD
                                         <b>Keluar</b>
+=======
+                                        <b>Logout</b>
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                                     </a>
             
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST">

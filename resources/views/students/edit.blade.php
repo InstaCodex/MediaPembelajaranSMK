@@ -7,7 +7,7 @@
         <p class="alert alert-danger">{{ $err }}</p>
         @endforeach
         @endif
-        <form action="{{ route('students.update', ['student' => $row->id]) }}" method="POST">
+        <form action="{{ route('users.update', $row) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="form-group">
@@ -32,8 +32,13 @@
                 </select>
             </div>
             <div class="form-group">
+<<<<<<< HEAD
                 <button class="btn btn-primary">Save</button>
                 <a class="btn btn-danger" href="{{ route('students.index') }}">Kembali</a>
+=======
+                <button class="btn btn-primary">Simpan</button>
+                <a class="btn btn-danger" href="{{ route('users.index') }}">Kembali</a>
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
             </div>
         </form>
     </div>

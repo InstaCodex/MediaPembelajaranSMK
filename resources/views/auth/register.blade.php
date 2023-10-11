@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  @extends('layouts.frontend')
+=======
+@extends('layouts.app')
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 
 @section('content')
 <div class="container">
@@ -61,8 +65,15 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
                         <div class="row mb-3">
                             <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
+=======
+<<<<<<< HEAD
+                        <div class="row mb-3">
+                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
+                        
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                             <div class="col-md-6">
                                 <select id="role" class="form-control" name="role">
                                     <option value=""></option>
@@ -70,7 +81,11 @@
                                     <option value="guru">Guru</option>
                                     <option value="siswa">Siswa</option>
                                 </select>
+<<<<<<< HEAD
 
+=======
+                        
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                                 @error('role')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -79,6 +94,11 @@
                             </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -92,4 +112,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection 
+=======
+@endsection
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9

@@ -50,8 +50,16 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[Lendio](https://lendio.com)**
 
 ## Contributing
+<<<<<<< HEAD
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+=======
+1.NAMA : DWI CAHYONO ROMADHON (9466)
+2.NAMA : SAIFUL HIDAYAT (9488)
+3.NAMA : FAIZ RIZKY SHURURI (9468)
+4.NAMA : FIKAR DWI RAMADHANI (9469)
+5.
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 
 ## Code of Conduct
 

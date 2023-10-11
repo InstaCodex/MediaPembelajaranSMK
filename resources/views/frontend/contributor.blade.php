@@ -1,7 +1,11 @@
 @extends('layouts.frontend')
 @section('content')
         <div class="container" style="margin-top: 50px;">
+<<<<<<< HEAD
             <h3 style="text-align: center; color:white">Dikembangkan oleh</h3>
+=======
+            <h3 style="text-align: center; color:white">Devoloped By</h3>
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
             <div class="row" style="margin-top: 100px;">
                 <div class="col-12 col-md-6 col-xl-3 mb-4">
                     <div class="card border-0" style="padding: 30px; background-color: #D9D9D9;">

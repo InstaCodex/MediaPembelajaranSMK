@@ -26,6 +26,10 @@
                                 @enderror
                             </div>
                         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
                         <div class="row mb-3">
                             <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
 

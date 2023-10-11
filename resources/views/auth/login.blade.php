@@ -1,4 +1,9 @@
-{{-- @extends('layout/frontend')
+<<<<<<< HEAD
+{{-- @extends('layouts/frontend')
+=======
+@extends('layouts.app')
+
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -38,18 +43,11 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role') }}</label>
+<<<<<<< HEAD
+                        
 
-                            <div class="col-md-6">
-                                <select id="role" name="role" class="form-control">
-                                    <option value="admin">Admin</option>
-                                    <option value="guru">Guru</option>
-                                    <option value="siswa">Siswa</option>
-                                </select>
-                            </div>
-                        </div>
-
+=======
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
                         <div class="row mb-3">
                             <div class="col-md-6 offset-md-4">
                                 <div class="form-check">
@@ -81,4 +79,8 @@
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 @endsection --}}
+=======
+@endsection
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9

@@ -21,6 +21,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+<<<<<<< HEAD
     public function index()
     {
         // If you want to return a specific view like 'admin/index'
@@ -38,4 +39,20 @@ class HomeController extends Controller
     //     // If you want to return 'layouts/backend' view
     //     return view('students.index');
     // }
+=======
+<<<<<<< HEAD
+    // public function index()
+    // {
+    //     return view('admin/index');
+    // }
+    public function index()
+    {
+        return view('layouts/backend');
+=======
+    public function index()
+    {
+        return view('home');
+>>>>>>> 18dbade65bd37075951b181fc849fcc75f9424f9
+    }
+>>>>>>> 3efb018d8a0ddfb7a6701257fa02c365c9134d68
 }
