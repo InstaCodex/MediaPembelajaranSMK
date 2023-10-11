@@ -1,98 +1,91 @@
-@extends('layouts.frontend')
+@extends('layouts.backend')
 @section('content')
-    <title>dwii</title>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Rak Buku</title>
     <style>
-        .container {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .rak-buku {
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            /* Rata tengah secara horizontal */
-            align-items: center;
-            /* Rata tengah secara vertikal */
-            height: 100vh;
+            height: 100%; /* Mengisi tinggi halaman */
+            align-items: center; /* Mengatur posisi vertikal ke tengah */
         }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            margin: 80px;
-            align-items: center;
-            grid-gap: 30px;
-        }
-
-        img {
-            object-fit: cover;
-        }
-
-        .grid>article {
-            box-shadow: 10px 5px 5px 2cap black;
-            border-radius: 20px;
+        .buku {
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
-            background: whitesmoke;
-            width: 300px;
-            transition: transform;
+            text-decoration: none; /* Tambahkan properti ini untuk menghilangkan underline pada tautan */
         }
 
-        .grid>article img {
-            border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
+        .buku img {
+            width: 100px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
         }
 
-        .grid>article:hover {
-            transform: scale(1.04);
-            transition: all .5s ease-in-out;
-            cursor: pointer;
-        }
-
-        @media (max-width:1000px) {
-            .grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width:800px) {
-            .grid {
-                grid-template-columns: repeat(1, 1fr);
-            }
+        .judul-buku {
+            font-weight: bold;
         }
     </style>
-    <div class="container">
-        <main class="grid">
-            <article>
-                <a href="./test.html" style="text-decoration: none; color: inherit;">
-                    <img src="makanan.jpeg" width="300px" height="300px">
-                    <div class="konten">
-                        <h2>APPETIZER</h2>
-                        <p>Merupakan hidangan pembuka</p>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="./test.html" style="text-decoration: none; color: inherit;">
-                    <img src="makanan.jpeg" width="300px" height="300px">
-                    <div class="konten">
-                        <h2>APPETIZER</h2>
-                        <p>Merupakan hidangan pembuka</p>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="./test.html" style="text-decoration: none; color: inherit;">
-                    <img src="makanan.jpeg" width="300px" height="300px">
-                    <div class="konten">
-                        <h2>APPETIZER</h2>
-                        <p>Merupakan hidangan pembuka</p>
-                    </div>
-                </a>
-            </article>
-            <article>
-                <a href="./test.html" style="text-decoration: none; color: inherit;">
-                    <img src="makanan.jpeg" width="300px" height="300px">
-                    <div class="konten">
-                        <h2>APPETIZER</h2>
-                        <p>Merupakan hidangan pembuka</p>
-                    </div>
-                </a>
-            </article>
-        </main>
+</head>
+<body>
+    <div class="rak-buku">
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/ipa.png" alt="Buku 1">
+            <div class="judul-buku">IPA</div>
+        </a>
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/mtk.png" alt="Buku 2">
+            <div class="judul-buku">MATEMATIKA</div>
+        </a>
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/indo.png" alt="Buku 3">
+            <div class="judul-buku">BAHASA INDONESIA</div>
+        </a>
+
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/inggris.png" alt="Buku 3">
+            <div class="judul-buku">BAHASA INGGRIS</div>
+        </a>
+
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/pai.png" alt="Buku 3">
+            <div class="judul-buku">PAI</div>
+        </a>
+
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/pkn.png" alt="Buku 3">
+            <div class="judul-buku">PPKN</div>
+        </a>
+
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/ips.png" alt="Buku 3">
+            <div class="judul-buku">IPS</div>
+        </a>
+
+        <a href="{{ url('#') }}" class="buku">
+            <img src="./gambar/buku/pjok.png" alt="Buku 3">
+            <div class="judul-buku">PJOK</div>
+        </a>
     </div>
+</body>
+</html>
 @endsection

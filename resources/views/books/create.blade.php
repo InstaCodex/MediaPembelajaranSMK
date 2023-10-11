@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Books</h2>
+                <h2>Tambahkan Buku</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('books.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('books.index') }}"> Kembali</a>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Name:</strong>
+                    <strong>Nama:</strong>
                     <input type="text" name="name" class="form-control" placeholder="Name">
                 </div>
             </div>
@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Category:</strong>
+                    <strong>Kategori:</strong>
                     <select name="category_id" class="form-control">
                         <option value=""></option>
                         @foreach ($categories as $category)
@@ -64,7 +64,7 @@
         </div>
 
         <div class="mb-3">
-            <label for="dokumen" class="form-label"><strong>Upload File</strong></label>
+            <label for="dokumen" class="form-label"><strong>Unggah File</strong></label>
             <div class="form-group">
                 <input class="form-control" type="file" name="dokumen">
                 @error('dokumen')
@@ -79,7 +79,7 @@
 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Kirim</button>
             </div>
         </div>
     </form>

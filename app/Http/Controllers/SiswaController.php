@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+
+use App\Models\Student;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Siswa;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SiswaController extends Controller
@@ -11,12 +13,22 @@ class SiswaController extends Controller
     /**
      * Display a listing of the resource.
      */
+    
+
     public function index(Request $request)
     {
-        $data['title'] = 'Data Siswa';
-        $data['q'] = $request->q;
-        $data['rows'] = Siswa::where('name', 'like', '%' . $request->q . '%')->get();
-        return view('students.index', $data);
+        $q = $request->input('q');
+
+        $query = User::query();
+        $query->where('role', '=', 'siswa');
+
+        if ($q) {
+            $query->where('name', 'like', '%' . $q . '%');
+        }
+
+        $users = $query->paginate(10);
+
+        return view('students.index', compact('users', 'q'));
     }
 
     /**
@@ -41,7 +53,7 @@ public function store(Request $request)
         'level' => 'required',
     ]);
 
-    $student = new Siswa(); // Menggunakan $student sebagai nama variabel
+    $student = new Student(); // Menggunakan $student sebagai nama variabel
     $student->name = $request->name;
     $student->email = $request->email;
     $student->password = Hash::make($request->password);
@@ -53,7 +65,7 @@ public function store(Request $request)
     /**
      * Display the specified resource.
      */
-    public function show(Siswa $student)
+    public function show(Student $student)
     {
         //
     }
@@ -61,7 +73,7 @@ public function store(Request $request)
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Siswa $student)
+    public function edit(Student $student)
     {
         $data['title'] = 'Ubah User';
         $data['row'] = $student;
@@ -72,7 +84,7 @@ public function store(Request $request)
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Siswa $student)
+    public function update(Request $request, Student $student)
     {
         $request->validate([
             'name' => 'required',
@@ -92,7 +104,7 @@ public function store(Request $request)
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Siswa $student)
+    public function destroy(Student $student)
     {
         $student->delete();
         return redirect('students')->with('success', 'Hapus Data Berhasil');

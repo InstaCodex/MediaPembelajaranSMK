@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Categori Pembelajaran SMA/SMK</h2>
+                <h2>Kategori Pembelajaran SMA/SMK</h2>
             </div>
         </div>
     </div>
@@ -18,10 +18,10 @@
                         placeholder="Pencarian..." />
                 </div>
                 <div class="form-group mr-1">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary">Cari</button>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('categories.create') }}">Create New Categori</a>
+                    <a class="btn btn-success" href="{{ route('categories.create') }}">Tambahkan Kategori</a>
                 </div>
             </form>
         </div>
@@ -29,9 +29,9 @@
             <table class="table table-bordered table-striped table-hover mb-0">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Name</th>
-                        <th width="280px">Action</th>
+                        <th width="50px">No</th>
+                        <th>Nama</th>
+                        <th width="280px">Aksi</th>
                     </tr>
                 </thead>
                 @php $no = 1; @endphp
@@ -39,7 +39,7 @@
                     <tr>
                         <td>{{ $no++ }}</td>
                         <td>{{ $category->name }}</td>
-                        <td>
+                        <td style="text-align: center;">
                             <form action="{{ route('categories.destroy', $category->id) }}" method="POST">
                                 <a class="btn btn-info" href="{{ route('categories.show', $category->id) }}">Lihat</a>
                                 @csrf

@@ -22,11 +22,21 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'level',
+        'role',
     ];
     public function books()
     {
         return $this->hasMany(Book::class, 'user_id', 'id');
+    }
+
+    public function batches()
+    {
+        return $this->hasMany(Batch::class);
+    }
+
+    public function lessons()
+    {
+        return $this->hasMany(Lesson::class);
     }
     /**
      * The attributes that should be hidden for serialization.

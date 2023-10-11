@@ -18,10 +18,10 @@
                         placeholder="Pencarian..." />
                 </div>
                 <div class="form-group mr-1">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary">Cari</button>
                 </div>
                 <div class="pull-right">
-                    <a class="btn btn-success" href="{{ route('books.create') }}">Creat New Books</a>
+                    <a class="btn btn-success" href="{{ route('books.create') }}">Tambahkan Buku</a>
                 </div>
             </form>
         </div>
@@ -29,10 +29,10 @@
             <table class="table table-bordered table-striped table-hover mb-0">
                 <thead>
                     <tr>
-                        <th>No</th>
-                        <th>Name</th>
+                        <th width="50px">No</th>
+                        <th>Nama</th>
                         <th>File</th>
-                        <th width="280px">Action</th>
+                        <th width="250px">Aksi</th>
                     </tr>
                 </thead>
                 <?php $no = 1; ?>
@@ -41,7 +41,7 @@
                         <td>{{ $index + 1 }}</td>
                         <td>{{ $book->name }}</td>
                         <td>{{ $book->dokumen }}</td>
-                        <td>
+                        <td style="text-align: center;">
                             <form action="{{ route('books.destroy', $book->id) }}" method="POST">
                                 <a class="btn btn-info" href="{{ route('books.show', $book->id) }}">Lihat</a>
                                 @csrf

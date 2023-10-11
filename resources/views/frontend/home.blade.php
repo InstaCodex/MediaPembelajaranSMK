@@ -37,9 +37,9 @@ button:hover{
 <div class="content">
     <h1>Ayo Mulai Belajar</h1>
     <p>Studying Is Tiring, But It Will Be Even More Tiring If You Don't Study At This Time</p>
-    <div>
+    {{-- <div>
         <button type="button"><a href="{{ url('/book') }}" style="text-decoration: none; color: white;" >MULAI</a><span></span></button>
-    </div>
+    </div> --}}
 </div>
 
 @endsection

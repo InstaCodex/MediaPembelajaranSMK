@@ -1,4 +1,4 @@
-@extends('app')
+
 @section('content')
 <div class="row">
     <div class="col-md-6">
@@ -10,7 +10,7 @@
         <form action="{{ route('students.store') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label>Nama User <span class="text-danger">*</span></label>
+                <label>Nama pengguna <span class="text-danger">*</span></label>
                 <input class="form-control" type="text" name="name" value="{{ old('name') }}" />
             </div>
             <div class="form-group">
@@ -18,11 +18,11 @@
                 <input class="form-control" type="email" name="email" value="{{ old('email') }}" />
             </div>
             <div class="form-group">
-                <label>Password <span class="text-danger">*</span></label>
+                <label>Sandi <span class="text-danger">*</span></label>
                 <input class="form-control" type="password" name="password" />
             </div>
             <div class="form-group">
-                <label>Level <span class="text-danger">*</span></label>
+                <label>Role <span class="text-danger">*</span></label>
                 <select class="form-control" name="level" />
                 @foreach($levels as $key => $val)
                 @if($key==old('level'))

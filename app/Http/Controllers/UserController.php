@@ -26,7 +26,7 @@ class UserController extends Controller
     public function create(Request $request)
     {
         $data['title'] = 'Tambah User';
-        $data['role'] = ['guru' => 'Guru'];
+        $data['role'] = ['admin' => 'Admin', 'guru' => 'Guru', 'siswa' => 'Siswa'];
         return view('users.create', $data);
     }
 
@@ -67,7 +67,7 @@ class UserController extends Controller
     {
         $data['title'] = 'Ubah User';
         $data['row'] = $user;
-        $data['role'] = ['guru' => 'Guru'];
+        $data['role'] = ['admin' => 'Admin', 'guru' => 'Guru', 'siswa' => 'Siswa'];
         return view('users.edit', $data);
     }
 
